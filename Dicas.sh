@@ -110,6 +110,6 @@ find -name *ARQUIVO*.xml -exec ls -lart {} \;
 ================================================================================
 ### PROCURA TEXTO NOS ARQUIVOS
 
-find . -iname "*.xml" | while read f; do grep " " "$f"; done
+find . -iname "*.xml" | while read f; do grep "texto a procurar" "$f"; done
 
 
