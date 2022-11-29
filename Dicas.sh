@@ -12,6 +12,53 @@ sudo tcpdump -i enp3s0 -nn arp
 
 
 ================================================================================
+### IP FIXO
+# Netplan:
+
+nano /etc/netplan/00-installer-config.yaml
+
+# Caso nao existir o arquivo gerar:
+netplan generate
+
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    eno1:
+      addresses:
+      - 192.168.0.XX/24
+      gateway4: 192.168.0.XX
+      nameservers:
+        addresses:
+        - 192.168.0.XX
+        search:
+        - DOMINIO.com
+  version: 2
+  
+  # Testar a sintaxe do arquivo:
+  netplan try
+  
+  # Aplicar:
+  netplan apply
+  
+  
+  # Interfaces:
+  
+  nano /etc/network/interfaces
+  
+auto eth0
+iface eth0 inet static
+
+address 192.168.0.XX
+netmask 255.255.255.0
+network 192.168.0.XX
+gateway 192.168.0.XX
+dns-nameserver 192.168.0.XX
+
+# Aplicar:
+/etc/init.d/networking restart
+
+
+================================================================================
 ### DATA INSTALACAO
 ls -lct /etc | tail -1 | awk '{print $6, $7, $8}'
 
