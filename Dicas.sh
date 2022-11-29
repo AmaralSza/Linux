@@ -141,6 +141,12 @@ select now();
 
 
 ================================================================================
+### TAMANHO DE UM BANCO POST
+
+select datname, pg_size_pretty(pg_database_size(datname)) from pg_database;
+
+
+================================================================================
 # MONTAR DIRETORIO SAMBA LINUX
 
 //192.168.0.x/diretorio /local/destino cifs users,username=USUARIO,vers=1.0,password=SENHA,dir_mode=0777,file_mode=0777 0 0
