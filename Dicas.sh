@@ -81,6 +81,19 @@ tar -cvzf compacftar.tar.gz compactar/
 ### DESCOMPACTAR:
 tar -xvzf descompactar.tar.gz
 
+### COMPACTAR .zip:
+zip compactar.zip arquivo1 arquivo2
+
+### DESCOMPACTAR .zip:
+unzip descompactar.zip
+
+### ADICIONAR ARQUIVO AO ZIP:
+zip compactado.zip arquivo3
+
+### COMPACTAR DIRETORIO E ARQUIVOS RECURSIVAMENTE:
+zip -r compactar.zip pasta/subpasta/
+
+
 
 ================================================================================
 ### REMOVER IP KNOWN_HOSTS
