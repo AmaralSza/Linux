@@ -179,3 +179,14 @@ find -name *ARQUIVO*.xml -exec ls -lart {} \;
 find . -iname "*.xml" | while read f; do grep "texto a procurar" "$f"; done
 
 
+================================================================================
+### CRIAR E REMOVER LINK SIMBOLICO
+
+### CRIAR
+ln -s /local/do/arquivo/arquivo.sh /local/do/link/nomeDoLink
+
+### REMOVER
+rm /local/do/link/nomeDoLink
+
+### UNLINK
+unlink local/do/link/nomeDoLink
