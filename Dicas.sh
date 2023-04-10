@@ -4,6 +4,14 @@ du -h --max-depth=1
 
 
 ================================================================================
+### LISTA ARQUIVOS ORDENANDO POR TAMANHO
+ls -lASh
+
+### ORDEM REVERSA:
+ls -LASHr
+
+
+================================================================================
 ### COMANDOS REDE
 
 sudo arp-scan -I enp3s0 -l
