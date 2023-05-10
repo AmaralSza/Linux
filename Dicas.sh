@@ -92,6 +92,9 @@ tar -xvzf descompactar.tar.gz
 ### COMPACTAR .zip:
 zip compactar.zip arquivo1 arquivo2
 
+### COMPACTAR DIRETORIO .zip:
+zip -r compactar.zip /local/diretorio
+
 ### DESCOMPACTAR .zip:
 unzip descompactar.zip
 
