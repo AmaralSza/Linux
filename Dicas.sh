@@ -201,3 +201,25 @@ rm /local/do/link/nomeDoLink
 
 ### UNLINK
 unlink local/do/link/nomeDoLink
+
+
+================================================================================
+### SUBSTITUIR TEXTO COM SED
+
+# Substiruir em um arquivo
+sed -i 's/SubstiruirDe/SubstiruirPara/g' arquivo
+
+# Substiruir em varios arquivos
+find . -maxdepth 1 -type f -name '*.extensao' -exec sed -i 's/SubstiruirDe/SubstiruirPara/g' "{}" \;
+
+# Altera uma tag de um arquivo
+sed -i 's/<tag>SubstituirDe<\/tag>/<tag>SubstituirPara<\/tag>/g' arquivo.xml
+
+# Altera uma tag de varios arquivos
+find . -maxdepth 1 -type f -name '*.xml' -exec sed -i 's/<tag>SubstituirDe<\/tag>/<tag>SubstituirPara<\/tag>/g' "{}" \;
+
+# Mostra arquivo com grep
+find . -maxdepth 1 -type f -name '*.xml' -exec grep "<tag>texto</tag>" {} \;
+
+# Conta quantos arquivos contem o texto
+grep -l "<tag>texto</tag>" *.xml | wc -l
