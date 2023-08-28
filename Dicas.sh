@@ -73,6 +73,7 @@ ls -lct /etc | tail -1 | awk '{print $6, $7, $8}'
 
 ================================================================================
 ### EXTRACAO DE ARQUIVOS - COMPACTAR E DESCOMPACTAR
+sudo apt-get install -y rar p7zip-full p7zip-rar p7zip
 
 ### EXTRAIR PARA UM LOCAL:
 tar -xvzf abc.tar.gz -C /local/destino/
