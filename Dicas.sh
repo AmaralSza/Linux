@@ -106,7 +106,6 @@ zip compactado.zip arquivo3
 zip -r compactar.zip pasta/subpasta/
 
 
-
 ================================================================================
 ### REMOVER IP KNOWN_HOSTS
 ssh-keygen -f /home/usuario/.ssh/known_hosts -R 10.10.10.1
@@ -224,3 +223,11 @@ find . -maxdepth 1 -type f -name '*.xml' -exec grep "<tag>texto</tag>" {} \;
 
 # Conta quantos arquivos contem o texto
 grep -l "<tag>texto</tag>" *.xml | wc -l
+
+
+================================================================================
+### REPETIR COMANDOS EM X SEGUNDOS NO TERMINAL
+
+# watch -n <segundos> <comando>
+
+watch -n 5 df -h
