@@ -231,3 +231,13 @@ grep -l "<tag>texto</tag>" *.xml | wc -l
 # watch -n <segundos> <comando>
 
 watch -n 5 df -h
+
+
+================================================================================
+### REDIMENSIONAR TAMANHO DISCO LVM
+
+# Caso queira aumentar o LV e usar todo o espaço disponivel
+lvresize -r -l+100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+
+# Caso queira aumentar um determinado tamanho, EX: 200G
+lvresize -r -l +200G /dev/mapper/ubuntu--vg-ubuntu--lv
