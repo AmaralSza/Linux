@@ -241,3 +241,18 @@ lvresize -r -l+100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 
 # Caso queira aumentar um determinado tamanho, EX: 200G
 lvresize -r -l +200G /dev/mapper/ubuntu--vg-ubuntu--lv
+
+================================================================================
+### TESTAR HD
+
+# Gerando relatorio
+sudo badblocks -v /dev/sda1 >> bad-sectors.txt
+
+# Simplesmente verifica cada bloco que pode ser lido, não testa por erros de escrita:
+sudo badblocks -sv -c 1024 /dev/sda 
+
+# Metodo "non-destructive" que testa cada bloco lendo, escrevendo e verificando.
+sudo badblocks -nsv -c 10240 /dev/sda 
+
+# Metodo write test - APAGA TUDO 
+sudo badblocks -wsv -c 10240 /dev/sdc >> bad-sectors.txt
