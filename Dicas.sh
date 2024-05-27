@@ -112,6 +112,17 @@ ssh-keygen -f /home/usuario/.ssh/known_hosts -R 10.10.10.1
 
 
 ================================================================================
+### ERRO SSH ANTIGOS
+* no matching host key type found. Their offer: ssh-rsa,ssh-dss
+
+# Solucao
+sudo nano /etc/ssh/ssh_config.d/my.conf
+
+HostKeyAlgorithms ssh-rsa,ssh-dss
+PubkeyAcceptedKeyTypes ssh-rsa,ssh-dss
+
+
+================================================================================
 ### HORARIO HARDWARE
 
 ### Ajustar horario do sistema:
