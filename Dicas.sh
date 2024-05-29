@@ -118,8 +118,7 @@ ssh-keygen -f /home/usuario/.ssh/known_hosts -R 10.10.10.1
 # Solucao
 sudo nano /etc/ssh/ssh_config.d/my.conf
 
-HostKeyAlgorithms ssh-rsa,ssh-dss
-PubkeyAcceptedKeyTypes ssh-rsa,ssh-dss
+HostKeyAlgorithms +ssh-rsa
 
 
 ================================================================================
