@@ -112,6 +112,21 @@ ssh-keygen -f /home/usuario/.ssh/known_hosts -R 10.10.10.1
 
 
 ================================================================================
+### ACESSAR HOST SEM SENHA SSH
+
+# Metodo 01
+ssh-copy-id usuario@192.168.X.XXX
+
+# Metodo02
+ssh-keygen
+
+scp ~/.ssh/id_rsa.pub usuario@192.168.X.XXX:/tmp
+
+# No host
+cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
+
+
+================================================================================
 ### ERRO SSH ANTIGOS
 * no matching host key type found. Their offer: ssh-rsa,ssh-dss
 
@@ -119,6 +134,9 @@ ssh-keygen -f /home/usuario/.ssh/known_hosts -R 10.10.10.1
 sudo nano /etc/ssh/ssh_config.d/my.conf
 
 HostKeyAlgorithms +ssh-rsa
+
+ssh -o PubkeyAcceptedAlgorithms=+ssh-rsa 192.168.X.XXX
+scp -o PubkeyAcceptedAlgorithms=+ssh-rsa arquivo.txt 192.168.X.XXX:/tmp
 
 
 ================================================================================
