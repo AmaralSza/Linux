@@ -284,3 +284,19 @@ sudo badblocks -nsv -c 10240 /dev/sda
 
 # Metodo write test - APAGA TUDO 
 sudo badblocks -wsv -c 10240 /dev/sdc >> bad-sectors.txt
+
+================================================================================
+### SSH REVERSO
+
+# Servidor local
+sudo nano /etc/ssh/sshd_config
+  GatewayPorts yes
+
+sudo service ssh restart
+
+# Abrir tunel
+ssh -R 2222:localhost:22 usuario@IP_REMOTO
+
+# Acessar
+1 - Logar no SERVIDOR REMOTO
+ssh -p 2222 userio@localhost
