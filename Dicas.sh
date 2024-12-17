@@ -275,6 +275,16 @@ lvresize -r -l+100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 # Caso queira aumentar um determinado tamanho, EX: 200G
 lvresize -r -l +200G /dev/mapper/ubuntu--vg-ubuntu--lv
 
+
+================================================================================
+### VER SE E UM HDD OU SSD
+
+cat /sys/block/sda/queue/rotational
+
+0: O disco é um SSD.
+1: O disco é um HDD.
+
+
 ================================================================================
 ### TESTAR HD
 
