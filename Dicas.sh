@@ -315,3 +315,17 @@ ssh -R 2222:localhost:22 usuario@IP_REMOTO
 # Acessar
 1 - Logar no SERVIDOR REMOTO
 ssh -p 2222 userio@localhost
+
+
+================================================================================
+### MONTAR DIRETORIO DA REDE
+Se o servidor não permitir SMBv3, tente vers=2.0 ou vers=1.0
+
+sudo mount -t cifs //server/disk2 /mnt/disk2 -o username=SEU_USUARIO,password=SUA_SENHA,vers=3.0
+
+Ou somente:
+sudo mount -t cifs //server/disk2 /mnt/disk2 -o username=SEU_USUARIO
+
+Com dominio:
+sudo mount -t cifs //server/disk2 /mnt/disk2 -o username=SEU_USUARIO,password=SUA_SENHA,domain=SEU_DOMINIO,vers=3.0
+
