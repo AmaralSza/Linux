@@ -32,6 +32,7 @@
 nano /etc/netplan/00-installer-config.yaml
 ~~~
 **Caso nao existir o arquivo gerar:**
+
 `netplan generate`
 
 ~~~
@@ -369,7 +370,7 @@ watch -n <segundos> <comando>
 
 * Acessar
 
-1 - Logar no SERVIDOR REMOTO
+1. Logar no SERVIDOR REMOTO
 
 `ssh -p 2222 userio@localhost`
 
