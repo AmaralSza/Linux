@@ -29,7 +29,7 @@ Adicionar a linha ao final:
 
 >ad.security.interactive_access=1
 
-Rodar:
+Executar o comando:
 ~~~
 anydesk-global-settings
 ~~~
