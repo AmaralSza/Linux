@@ -389,3 +389,23 @@ watch -n <segundos> <comando>
 * Com dominio:
 
 `sudo mount -t cifs //server/disk2 /mnt/disk2 -o username=SEU_USUARIO,password=SUA_SENHA,domain=SEU_DOMINIO,vers=3.0`
+
+
+================================================================================
+### JUNTAR ARQUIVOS .PDF
+
+* Instalar o pdftk
+
+`sudo apt-get install pdftk`
+
+### Comandos
+
+* Juntar arquivos
+
+`pdftk arquivo1.pdf arquivo2.pdf output arquivo_final.pdf`
+
+* Extrair páginas do arquivo
+
+`pdftk A=arquivo.pdf cat A1 output pagina1.pdf`
+
+`pdftk A=arquivo1.pdf B=arquivo1.pdf cat A1-7 B2 output arquivo_final.pdf`
