@@ -88,16 +88,14 @@ netplan apply
 nano /etc/network/interfaces
 ~~~
 
-~~~
-auto eth0
+`auto eth0
 iface eth0 inet static
 
 address 192.168.0.XX
 netmask 255.255.255.0
 network 192.168.0.XX
 gateway 192.168.0.XX
-dns-nameserver 192.168.0.XX
-~~~
+dns-nameserver 192.168.0.XX`
 
 * Aplicar:
 
