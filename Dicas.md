@@ -54,7 +54,6 @@ nano /etc/netplan/00-installer-config.yaml
 netplan generate
 ~~~
 
-~~~
 network:
   ethernets:
     eno1:
@@ -67,7 +66,6 @@ network:
         search:
         - DOMINIO.com
   version: 2
-~~~
   
 * Testar a sintaxe do arquivo:
 
@@ -88,6 +86,7 @@ netplan apply
 nano /etc/network/interfaces
 ~~~
 
+~~~
 auto eth0
 iface eth0 inet static
 
@@ -96,6 +95,7 @@ netmask 255.255.255.0
 network 192.168.0.XX
 gateway 192.168.0.XX
 dns-nameserver 192.168.0.XX
+~~~
 
 * Aplicar:
 
