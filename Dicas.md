@@ -88,7 +88,7 @@ netplan apply
 nano /etc/network/interfaces
 ~~~
 
-`
+~~~
 auto eth0
 iface eth0 inet static
 
@@ -97,7 +97,7 @@ netmask 255.255.255.0
 network 192.168.0.XX
 gateway 192.168.0.XX
 dns-nameserver 192.168.0.XX
-`
+~~~
 
 * Aplicar:
 
@@ -210,7 +210,7 @@ cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
 ### ERRO SSH ANTIGOS
 * no matching host key type found. Their offer: ssh-rsa,ssh-dss
 
-*** Solucao ***
+** Solucao **
 ~~~
 sudo nano /etc/ssh/ssh_config.d/my.conf
 ~~~
@@ -271,7 +271,7 @@ hwclock -s
 timedatectl list-timezones
 ~~~
 
-*** Exemplo: ***
+** Exemplo: **
 
 
 > America/Sao_Paulo
