@@ -54,7 +54,7 @@ nano /etc/netplan/00-installer-config.yaml
 netplan generate
 ~~~
 
-network:
+`network:
   ethernets:
     eno1:
       addresses:
@@ -65,7 +65,7 @@ network:
         - 192.168.0.XX
         search:
         - DOMINIO.com
-  version: 2
+  version: 2`
   
 * Testar a sintaxe do arquivo:
 
