@@ -210,7 +210,7 @@ cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
 ### ERRO SSH ANTIGOS
 * no matching host key type found. Their offer: ssh-rsa,ssh-dss
 
-** Solucao **
+**Solucao**
 ~~~
 sudo nano /etc/ssh/ssh_config.d/my.conf
 ~~~
