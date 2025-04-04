@@ -271,7 +271,7 @@ hwclock -s
 timedatectl list-timezones
 ~~~
 
-** Exemplo: **
+**Exemplo:**
 
 
 > America/Sao_Paulo
