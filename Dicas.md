@@ -585,3 +585,11 @@ pdftk A=arquivo1.pdf B=arquivo1.pdf cat A1-7 B2 output arquivo_final.pdf
 ```
 for arquivo in *.BAK; do tar -czvf "${arquivo%.*}.tar.gz" "$arquivo"; done
 ```
+
+================================================================================
+
+### VERIFICAR IP EXTERNO
+
+```
+wget -q -O /dev/stdout http://checkip.dyndns.org/ | cut -d : -f 2- | cut -d \< -f -1
+```
