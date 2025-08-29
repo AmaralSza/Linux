@@ -1,5 +1,11 @@
 ================================================================================
 
+### FORMATACAO MARKDOWN
+
+Sintaxe básica de gravação e formatação no [GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+================================================================================
+
 ### TAMANHO DIRETORIOS
 
 ```
