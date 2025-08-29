@@ -636,3 +636,11 @@ RTC in local TZ: no
 ```
 journalctl -u systemd-timesyncd.service | grep '192.168.0.X'
 ```
+
+================================================================================
+
+### COPIAR VIA SCP USANDO RSYNC
+
+```
+rsync -avz --progress /disk2/ root@192.168.0.x:/disk2/
+```
