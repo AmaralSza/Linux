@@ -660,6 +660,10 @@ sudo dmidecode -s bios-version
 ```
 
 ```
+sudo dmidecode -t bios
+```
+
+```
 sudo dmidecode -t baseboard
 ```
 
