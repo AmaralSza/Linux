@@ -593,3 +593,46 @@ for arquivo in *.BAK; do tar -czvf "${arquivo%.*}.tar.gz" "$arquivo"; done
 ```
 wget -q -O /dev/stdout http://checkip.dyndns.org/ | cut -d : -f 2- | cut -d \< -f -1
 ```
+
+================================================================================
+
+### CONFIGURAR NTP LOCAL COM SYSTEMCTL
+
+```
+sudo timedatectl set-ntp true
+```
+
+```
+sudo nano /etc/systemd/timesyncd.conf
+
+```
+
+```
+[Time]
+NTP=192.168.0.X
+
+```
+
+```
+sudo systemctl restart systemd-timesyncd
+```
+
+```
+timedatectl
+```
+
+- Saida comum
+
+```
+Local time: sex 2025-08-29 10:13:54 -03
+Universal time: sex 2025-08-29 13:13:54 UTC
+RTC time: sex 2025-08-29 13:13:54
+Time zone: America/Sao_Paulo (-03, -0300)
+System clock synchronized: yes
+NTP service: active
+RTC in local TZ: no
+```
+
+```
+journalctl -u systemd-timesyncd.service | grep '192.168.0.X'
+```
