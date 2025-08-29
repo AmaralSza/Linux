@@ -650,3 +650,19 @@ journalctl -u systemd-timesyncd.service | grep '192.168.0.X'
 ```
 rsync -avz --progress /disk2/ root@192.168.0.x:/disk2/
 ```
+
+================================================================================
+
+### VERIFICAR A VERSAO DA BIOS
+
+```
+sudo dmidecode -s bios-version
+```
+
+```
+sudo dmidecode -t baseboard
+```
+
+```
+sudo dmidecode -t system
+```
