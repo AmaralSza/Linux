@@ -670,3 +670,11 @@ sudo dmidecode -t baseboard
 ```
 sudo dmidecode -t system
 ```
+
+================================================================================
+
+### INSTALAR FONTES MICROSOFT TrueType
+
+```
+sudo apt install ttf-mscorefonts-installer
+```
