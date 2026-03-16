@@ -678,39 +678,3 @@ sudo dmidecode -t system
 ```
 sudo apt install ttf-mscorefonts-installer
 ```
-
-================================================================================
-
-### ADICIONAR UM NOVO DISCO (RECONHECE MAIS QUE 2TB)
-
-```
-lsblk
-```
-
-```
-sudo parted /dev/sdb mklabel gpt
-```
-
-```
-sudo parted /dev/sdb mkpart primary ext4 0% 100%
-```
-
-```
-sudo mkfs.ext4 /dev/sdb1
-```
-
-```
-sudo blkid /dev/sdb1
-```
-
-```
-sudo nano /etc/fstab
-```
-
-```
-UUID=xxxxxxxxxxx /diskX  ext4  defaults  0  2
-```
-
-```
-sudo mount -a
-```
