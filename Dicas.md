@@ -679,8 +679,6 @@ sudo dmidecode -t system
 sudo apt install ttf-mscorefonts-installer
 ```
 
-================================================================================
-
 ### ADICIONAR UM NOVO DISCO (RECONHECE MAIS QUE 2TB)
 
 ```
