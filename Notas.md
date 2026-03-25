@@ -47,7 +47,7 @@ anydesk-global-settings
 ### DWSERVICE COM USUARIO PADRÃO
 
 ```
-sudo systemctl start dwagent
+sudo systemctl stop dwagent
 ```
 
 ```
