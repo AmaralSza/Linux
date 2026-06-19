@@ -78,3 +78,43 @@ sudo systemctl daemon-reload
 ```
 sudo systemctl start dwagent
 ```
+
+================================================================================
+
+### PAINEL CINNAMON LINUX MINT
+
+Efetuar backup
+
+```
+dconf dump /org/cinnamon/ > ~/backup_cinnamon_painel.dconf
+```
+
+Restaurar backup
+
+```
+dconf load /org/cinnamon/ < ~/backup_cinnamon_painel.dconf
+```
+
+Limpa as configurações de layout e applets do painel
+
+```
+dconf reset -f /org/cinnamon/
+```
+
+Reseta a lista e a disposição dos painéis
+
+```
+dconf reset -f /org/cinnamon/panels/
+```
+
+Reseta as configurações dos applets (relógio, menu, etc.) que ficam na barra
+
+```
+dconf reset -f /org/cinnamon/panel-launchers/
+```
+
+Reinicia o Cinnamon para aplicar a mudança imediatamente
+
+```
+cinnamon --replace &
+```
