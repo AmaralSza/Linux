@@ -362,6 +362,10 @@ select datname, pg_size_pretty(pg_database_size(datname)) from pg_database;
 find -name *ARQUIVO*.xml -exec cp {} /destino/ \;`
 ```
 
+```
+find . -type f -name "*.iso" -exec mv -i {} /disk2/iso/ \;
+```
+
 ### Procura e lista arquivos:
 
 ```
